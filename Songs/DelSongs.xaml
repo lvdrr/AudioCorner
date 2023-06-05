@@ -1,0 +1,26 @@
+﻿<Window x:Class="AudioCorner.Songs.DelSongs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioCorner.Songs"
+        mc:Ignorable="d"
+        Title="DelSongs" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/Songs/headphonesbg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Button x:Name="ExitDelSongBut" Style="{DynamicResource ControlButtons}" HorizontalAlignment="Right" Content="X" Width="25" Height="25" Margin="0,0,0,0" Click="ExitDelSongBut_Click" FontFamily="Courier New" FontSize="14"/>
+            <TextBox x:Name="DelSongID" Style="{DynamicResource TextBox}" TextWrapping="Wrap" Text="Введите ID" Width="120" Height="25" VerticalAlignment="Bottom" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button Style="{DynamicResource ControlButtons}" x:Name="DoneDelSong" Content="Готово" Click="DoneDelSong_Click" Width="100" Height="35" FontFamily="Courier New" FontSize="18"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

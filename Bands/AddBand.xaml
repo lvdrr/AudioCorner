@@ -1,0 +1,30 @@
+﻿<Window x:Class="AudioCorner.AddBand"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioCorner"
+        mc:Ignorable="d"
+        Title="AddBand" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" Topmost="True" ResizeMode="NoResize" Icon="/Bands/group_icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/headphonesbg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBox x:Name="AddBandID" Style="{DynamicResource TextBox}" TextWrapping="Wrap" Text="ID" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="AddBandName" Style="{DynamicResource TextBox}" TextWrapping="Wrap" Text="Название группы" Width="150" Height="25" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+            <Button x:Name="DoneAddBut" Style="{DynamicResource ControlButtons}" Content="Готово" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="35" Margin="0,100,0,0" Click="DoneAddBut_Click" FontFamily="Courier New" FontSize="18"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Button x:Name="ExitAddBandBut" Style="{DynamicResource ControlButtons}" Content="X" Width="25" Height="25" Click="ExitAddBandBut_Click" Margin="242,0,0,0" FontFamily="Courier New" FontSize="14"/>
+            <TextBox x:Name="AddBandFormedIn" Style="{DynamicResource TextBox}" TextWrapping="Wrap" Text="Год формирования" Width="150" Height="25" Margin="0,75,0,0" FontSize="14" FontFamily="Courier New"/>
+        </StackPanel>
+    </Grid>
+</Window>

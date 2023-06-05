@@ -1,0 +1,42 @@
+﻿<Window x:Class="AudioCorner.Albums.AddAlbum"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioCorner.Albums"
+        mc:Ignorable="d"
+        Title="AddAlbum" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Icon="/Albums/album_icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/Albums/headphonesbg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBox x:Name="AddAlbumID" TextWrapping="Wrap" Style="{DynamicResource TextBox}" Text="ID Альбома" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="AddBandID" TextWrapping="Wrap" Style="{DynamicResource TextBox}" Text="ID Группы" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBox x:Name="AddAlbumName" TextWrapping="Wrap" Style="{DynamicResource TextBox}" Text="Название Альбома" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBox x:Name="AddNumOfAlbumSongs" TextWrapping="Wrap" Style="{DynamicResource TextBox}" Text="Количество песен" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="4">
+            <TextBox x:Name="AddGenre" TextWrapping="Wrap" Style="{DynamicResource TextBox}" Text="Жанр" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="5">
+            <Button x:Name="ExitAddAlbum" Content="X" Style="{DynamicResource ControlButtons}" Width="25" Height="25" Margin="0,0,0,0" FontFamily="Courier New" FontSize="14" HorizontalAlignment="Right" Click="ExitAddAlbum_Click"/>
+            <TextBox x:Name="AddReleaseDate" TextWrapping="Wrap" Style="{DynamicResource TextBox}" Text="Дата выпуска" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,75,0,0" FontFamily="Courier New" FontSize="14"/>
+        </StackPanel>
+        <Button x:Name="DoneAddAlbum" Style="{DynamicResource ControlButtons}" Content="Готово" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="35" Margin="117,328,0,0" FontFamily="Courier New" FontSize="18" Grid.ColumnSpan="2" Click="DoneAddAlbum_Click" Grid.Column="2"/>
+    </Grid>
+</Window>
